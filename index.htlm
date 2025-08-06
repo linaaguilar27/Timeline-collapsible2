@@ -1,0 +1,145 @@
+<style>
+  body {
+    color: #285C4D;
+    font-family: 'Greycliff CF', sans-serif;
+    line-height: 1.75;
+  }
+
+  a {
+    color: #285C4D;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #285C4D;
+  }
+
+  .accordion {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .accordion .step {
+    font-family: 'Greycliff CF Extra', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: relative;
+    background-color: #f5f9ed;
+    border-left: 5px solid #78BE20;
+  }
+
+  .accordion .step:hover {
+    background-color: #e2f1d4;
+  }
+
+  .accordion .items {
+    display: none;
+    padding: 15px 20px;
+    margin-left: 0;
+    text-align: justify;
+    background-color: #fff;
+    border-left: 5px solid #d9e7cb;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  }
+
+  .accordion.active .items {
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Greycliff CF Extra', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .section-content {
+    line-height: 26px;
+  }
+
+  ul {
+    margin-bottom: 1rem;
+    padding-left: 20px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<!-- TIMELINE ACCORDIONS -->
+<div class="accordion">
+  <div class="step">June 2025</div>
+  <div class="items">
+    <div class="section-content">
+      <p>The Joint Review Report of FSC Principles and Criteria, International Generic Indicators, and other Forest Management normative documents is published. Click <strong><a href="https://connect.fsc.org/media/jointreviewreportpciandotherfmnormativedocumentspdf" target="_blank">here</a></strong> to read the report.</p>
+    </div>
+  </div>
+</div>
+
+<div class="accordion">
+  <div class="step">April – July 2025</div>
+  <div class="items">
+    <div class="section-title">Key topic webinars for FSC Principles, Criteria, and Indicators revision</div>
+    <div class="section-content">
+      <p><strong>Social Aspects (30 April 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>Presentation: <a href="https://connect.fsc.org/media/fsc-introduction-pc-and-igisocialwebinar2025pdf" target="_blank">English</a> | Q&A: <a href="https://connect.fsc.org/media/fsc-introduction-pc-and-igisocialwebinar2025qapdf" target="_blank">here</a></p>
+
+      <p><strong>Climate Change and Biodiversity (25 June 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>Presentation: <a href="https://connect.fsc.org/media/pci-revisionwebinarclimate-changebiodiversity2025pdf" target="_blank">English</a></p>
+
+      <p><strong>Outcome Orientation (9 July 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>Presentation: <a href="https://connect.fsc.org/media/pci-revisionwebinaroutcome-orientation2025pdf" target="_blank">English</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="accordion">
+  <div class="step">December 2024</div>
+  <div class="items">
+    <div class="section-content">
+      <p><strong>Webinars on the P&amp;C and IGI Revision Process</strong></p>
+      <p>FSC hosted two webinars to introduce its members to the joint revision process of the FSC Principles &amp; Criteria (P&amp;C) and the International Generic Indicators (IGI).</p>
+      <p>Presentation: 
+        <a href="https://connect.fsc.org/media/webinar06122024enpdf-0" target="_blank">English</a> | 
+        <a href="https://connect.fsc.org/es/media/webinar06122024sppdf" target="_blank">Spanish</a> | 
+        <a href="https://connect.fsc.org/fr/media/webinar06122024frpdf" target="_blank">French</a>
+      </p>
+      <ul>
+        <li>Dec 6, 09:00–10:30 CET</li>
+        <li>Dec 6, 16:30–18:00 CET (with translation)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion">
+  <div class="step">October 2024</div>
+  <div class="items">
+    <div class="section-content">
+      <p>29 October: Kick off the process.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const acc = document.querySelectorAll('.accordion');
+  acc.forEach(section => {
+    section.querySelector('.step').addEventListener('click', () => {
+      acc.forEach(s => s.classList.remove('active')); // close others
+      section.classList.add('active'); // open clicked
+    });
+  });
+</script>
